@@ -3,67 +3,75 @@
 import { useState } from 'react';
 
 export default function FAQSection() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
   const faqs = [
     {
       question: "What are dental implants?",
-      answer: "Dental implants are titanium posts surgically placed into the jawbone to replace missing tooth roots. They provide a strong foundation for fixed or removable replacement teeth that look, feel, and function like natural teeth. At Zahra Dental Clinic, Dr. Abbas Noorani has placed thousands of successful implants over 14+ years."
+      answer: "Dental implants are titanium posts surgically placed into the jawbone to replace missing tooth roots. They provide a strong foundation for replacement teeth that look, feel, and function like natural teeth."
     },
     {
-      question: "How much do dental implants cost at Zahra Dental Clinic?",
-      answer: "At Zahra Dental Clinic, dental implants start at just ₹18,000 per implant — one of the most affordable options in Ahmedabad. The final cost depends on the type of implant and crown selected. Book a free consultation with Dr. Abbas Noorani to get an accurate quote."
+      question: "How much do implants cost at Zahra Dental?",
+      answer: "Dental implants start at just ₹18,000 per implant — one of the most affordable options in Ahmedabad. Book a free consultation with Dr. Abbas Noorani for an accurate quote."
     },
     {
       question: "How long do dental implants last?",
-      answer: "With proper care and regular dental checkups, dental implants can last 15 years or more, and in many cases, they last a lifetime. Good oral hygiene and healthy gums are key to long-term success."
+      answer: "With proper care and regular checkups, dental implants can last 15+ years, often a lifetime. Good oral hygiene is key to long-term success."
     },
     {
       question: "Are dental implants painful?",
-      answer: "Most patients experience minimal discomfort during and after the procedure. At Zahra Dental Clinic, we use advanced techniques and local anesthesia to ensure your comfort. Most patients are surprised by how painless the procedure actually is."
+      answer: "Most patients experience minimal discomfort. We use advanced techniques and local anesthesia for your comfort. Most patients are surprised by how painless it is."
     },
     {
-      question: "Who is a good candidate for dental implants?",
-      answer: "Ideal candidates are individuals with healthy gums, sufficient bone density, and good overall health. Even if you've experienced bone loss, advanced options like bone grafting can make implants possible. Dr. Abbas Noorani will assess your suitability during your free consultation."
+      question: "Who is a good candidate for implants?",
+      answer: "Ideal candidates have healthy gums and sufficient bone density. Even with bone loss, options like bone grafting can make implants possible. Dr. Noorani will assess your suitability during consultation."
     },
     {
-      question: "How long does the implant procedure take?",
-      answer: "The implant placement itself typically takes 30-60 minutes per implant. After placement, a healing period of 3-6 months is needed for the implant to fuse with the bone. The final crown is then placed. Dr. Noorani will explain the complete timeline during your consultation."
+      question: "How long does the procedure take?",
+      answer: "Implant placement takes 30-60 minutes per implant. A healing period of 3-6 months follows for bone fusion, then the final crown is placed."
     },
     {
       question: "What are the clinic timings?",
-      answer: "Zahra Dental Clinic is open Monday to Saturday. Morning: 9:00 AM – 1:00 PM, Evening: 4:00 PM – 8:30 PM. You can call us at +91 9277756167 or +91 9638787144 to book an appointment."
+      answer: "Monday to Saturday. Morning: 9:00 AM – 1:00 PM, Evening: 4:00 PM – 8:30 PM. Call +91 9277756167 or +91 9638787144 to book."
     }
   ];
 
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
   return (
-    <section className="p-4 md:p-8 lg:p-12">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl md:text-3xl font-bold text-center mb-6">
-          Frequently Asked Questions about Dental Implants
-        </h2>
+    <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <p className="text-[var(--brand-gold)] text-sm font-semibold uppercase tracking-widest mb-3">FAQ</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">
+            Common Questions About Implants
+          </h2>
+        </div>
 
-        <div className="space-y-4">
+        <div className="space-y-2">
           {faqs.map((faq, index) => (
-            <div key={index} className="border rounded-lg hover:shadow-md transition-shadow">
+            <div
+              key={index}
+              className={`rounded-xl overflow-hidden border transition-all duration-300 ${
+                openFAQ === index ? 'border-[var(--brand-gold)]/30 shadow-md bg-white' : 'border-gray-100 bg-gray-50/50 hover:bg-white'
+              }`}
+            >
               <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full p-4 md:p-6 text-left font-bold hover:bg-gray-50 flex justify-between items-center"
+                onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                className="w-full p-5 text-left flex justify-between items-center gap-4"
               >
-                <span className="flex-grow pr-4 md:text-lg">{faq.question}</span>
-                <span className={`transform transition-transform ${openFAQ === index ? 'rotate-180' : ''} flex-shrink-0`}>
-                  ▼
+                <span className={`font-semibold text-sm md:text-base transition-colors ${openFAQ === index ? 'text-[var(--brand-gold)]' : 'text-[var(--brand-dark)]'}`}>
+                  {faq.question}
+                </span>
+                <span className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                  openFAQ === index ? 'bg-[var(--brand-gold)] text-white rotate-180' : 'bg-gray-100 text-gray-400'
+                }`}>
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                 </span>
               </button>
-              {openFAQ === index && (
-                <div className="p-4 md:p-6 border-t bg-gray-50">
-                  <p className="text-gray-700 italic md:text-lg">{faq.answer}</p>
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === index ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-5 pb-5">
+                  <p className="text-gray-500 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

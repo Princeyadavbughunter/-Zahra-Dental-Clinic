@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useState } from "react";
-
-// Import all components
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ImplantTypes from "@/components/ImplantTypes";
@@ -16,6 +14,7 @@ import Footer from "@/components/Footer";
 import PopupForm from "@/components/PopupForm";
 import StickyCTA from "@/components/StickyCTA";
 import AboutSection from "@/components/AboutSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   const [showStickyCta, setShowStickyCta] = useState(false);
@@ -23,7 +22,6 @@ export default function Home() {
   const [minutes, setMinutes] = useState(19);
   const [seconds, setSeconds] = useState(49);
 
-  // Countdown timer effect
   useEffect(() => {
     const timer = setInterval(() => {
       if (seconds > 0) {
@@ -36,47 +34,33 @@ export default function Home() {
         setSeconds(49);
       }
     }, 1000);
-
     return () => clearInterval(timer);
   }, [minutes, seconds]);
 
-  // Scroll handler for sticky CTA
   useEffect(() => {
-    const handleScroll = () => {
-      setShowStickyCta(window.scrollY > 300);
-    };
-
+    const handleScroll = () => setShowStickyCta(window.scrollY > 300);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Auto-show popup after 2 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 2000);
+    const timer = setTimeout(() => setShowPopup(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Section visibility observer
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('section').forEach((section) => {
-      observer.observe(section);
-    });
-
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px', threshold: 0.1 }
+    );
+    document.querySelectorAll('section').forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
@@ -92,12 +76,8 @@ export default function Home() {
 
   return (
     <div style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-      {/* Animated Background */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-40 right-10 w-24 h-24 bg-yellow-200 rounded-full opacity-20 animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-200 rounded-full opacity-20 animate-ping"></div>
-      </div>
+      {/* Subtle mesh background */}
+      <div className="fixed inset-0 pointer-events-none z-0 bg-mesh" />
 
       {/* Main Content */}
       <div className="relative z-10">
@@ -115,13 +95,9 @@ export default function Home() {
       </div>
 
       {/* Interactive Components */}
+      <WhatsAppButton />
       <StickyCTA isVisible={showStickyCta} onBookAppointment={openPopup} />
-      <PopupForm
-        isOpen={showPopup}
-        onClose={closePopup}
-        minutes={minutes}
-        seconds={seconds}
-      />
+      <PopupForm isOpen={showPopup} onClose={closePopup} minutes={minutes} seconds={seconds} />
     </div>
   );
 }

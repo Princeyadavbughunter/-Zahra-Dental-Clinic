@@ -6,61 +6,63 @@ export default function GoogleReviews() {
       name: "Rahul Sharma",
       initials: "RS",
       date: "2 months ago",
-      review: "I got my dental implant done at Zahra Dental Clinic by Dr. Abbas Noorani and I'm extremely happy with the results. The entire procedure was painless and the staff was very caring. The pricing is very affordable compared to other clinics in Ahmedabad. Highly recommended for anyone looking for dental implants!"
+      review: "Got my dental implant done by Dr. Abbas Noorani — extremely happy with the results. Painless procedure, caring staff, and very affordable pricing. Highly recommended!"
     },
     {
       name: "Fatima Patel",
       initials: "FP",
       date: "1 month ago",
-      review: "Dr. Abbas Noorani is an excellent implantologist. I was very nervous about getting implants but his calm and professional approach put me at ease. The clinic is well-equipped and hygienic. Got my implant done for just ₹18,000 — best value in Ahmedabad. Thank you Zahra Dental Clinic!"
+      review: "Dr. Abbas Noorani is an excellent implantologist. His calm approach put me at ease. Got my implant for ₹18,000 — best value in Ahmedabad. Thank you Zahra Dental!"
     },
     {
       name: "Mehul Desai",
       initials: "MD",
       date: "3 months ago",
-      review: "After visiting multiple dental clinics in Ahmedabad, I chose Zahra Dental Clinic for my implants based on their 600+ Google reviews. Dr. Noorani's 14+ years of experience really shows in his work. The implant feels completely natural. Absolutely worth it!"
+      review: "Chose Zahra Dental based on their 600+ reviews and I wasn't disappointed. Dr. Noorani's 14+ years of experience shows. The implant feels completely natural."
     },
     {
       name: "Priya Joshi",
       initials: "PJ",
       date: "2 months ago",
-      review: "I had two implants done at Zahra Dental Clinic and the experience was wonderful. Dr. Abbas Noorani explained everything clearly and the procedure was much more comfortable than I expected. The clinic near Vishala Circle is easy to find. I can see why they have 11,000+ happy patients!"
+      review: "Had two implants done here — wonderful experience. Dr. Abbas explained everything clearly and the procedure was much more comfortable than expected. Now I see why they have 11,000+ happy patients!"
     }
   ];
 
   return (
-    <section className="p-4 md:p-8 lg:p-12">
+    <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6 md:mb-10">
-          <Image
-            src="/images/google.png"
-            alt="Google Logo"
-            width={128}
-            height={48}
-            className="mx-auto mb-4 object-contain"
-          />
-          <h2 className="text-xl md:text-3xl font-bold">600+ Patients Recommend Us</h2>
-          <p className="text-gray-600 mt-2">Genuine 5-star reviews from real patients</p>
+        <div className="text-center mb-10">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Image src="/images/google.png" alt="Google" width={90} height={30} className="object-contain" />
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              ))}
+            </div>
+            <span className="text-gray-500 text-sm font-medium">4.9/5</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">600+ Patients Recommend Us</h2>
+          <p className="text-gray-400 mt-1 text-sm">Genuine reviews from real patients</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-white border rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-[var(--brand-dark)] text-white rounded-full flex items-center justify-center font-bold">
+            <div key={index} className="bg-[var(--bg-medical-light)] rounded-xl p-5 hover:shadow-md transition-all duration-300 border border-gray-100 group">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand-gold)] to-[#0097a7] text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {review.initials}
                 </div>
                 <div>
-                  <h3 className="font-bold md:text-lg">{review.name}</h3>
-                  <p className="text-sm text-gray-600">{review.date}</p>
+                  <h3 className="font-semibold text-sm text-[var(--brand-dark)]">{review.name}</h3>
+                  <p className="text-xs text-gray-400">{review.date}</p>
                 </div>
               </div>
-              <div className="flex text-yellow-400 mb-3">
+              <div className="flex mb-2.5">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i}>⭐</span>
+                  <svg key={i} className="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                 ))}
               </div>
-              <p className="text-gray-700 text-sm md:text-base">{review.review}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{review.review}</p>
             </div>
           ))}
         </div>

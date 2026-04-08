@@ -1,51 +1,60 @@
-import React from 'react';
-
 export default function AboutSection() {
     return (
-        <section className="py-12 md:py-16 px-4 md:px-8 lg:px-12 bg-gray-50">
-            <div className="max-w-6xl mx-auto">
-                <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-gold)] mb-6">About Zahra Dental Clinic & Implant Centre</h2>
-                    <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                        Zahra Dental Clinic & Implant Centre is a <strong>trusted name in dental implants</strong> led by <strong>Dr. Mohammad Abbas Noorani</strong>, a specialist in Implantology.
-                    </p>
-                    <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
-                        With <strong>14+ years of clinical experience</strong> and <strong>11,000+ happy patients</strong>, we specialize in <strong>affordable, high-quality dental implants</strong>. Our clinic boasts <strong>600+ genuine 5-star Google reviews</strong> — a testament to the trust our patients place in us.
+        <section className="py-16 md:py-20 px-4 md:px-8 lg:px-12 bg-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-gold)]/5 rounded-full blur-3xl -translate-y-1/2" />
+
+            <div className="max-w-6xl mx-auto relative">
+                <div className="mb-14 text-center">
+                    <p className="text-[var(--brand-gold)] text-sm font-semibold uppercase tracking-widest mb-3">About Our Clinic</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-dark)] mb-6">Zahra Dental Clinic & Implant Centre</h2>
+                    <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-8" />
+                    <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        Led by <strong className="text-[var(--brand-dark)]">Dr. Mohammad Abbas Noorani</strong>, we are Ahmedabad&apos;s trusted destination for dental implants. With <strong className="text-[var(--brand-dark)]">14+ years of expertise</strong> and a team dedicated to patient comfort, we&apos;ve earned the trust of over 11,000 patients.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-md">
-                        <h3 className="text-xl md:text-2xl font-bold text-[var(--brand-dark)] mb-4">Why Choose Us for Implants</h3>
+                <div className="grid md:grid-cols-2 gap-6 mb-14">
+                    <div className="bg-[var(--bg-medical-light)] p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <h3 className="text-lg font-bold text-[var(--brand-dark)] mb-5 flex items-center gap-2">
+                            <span className="w-8 h-8 bg-[var(--brand-gold)]/15 rounded-lg flex items-center justify-center">
+                                <svg className="w-4 h-4 text-[var(--brand-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </span>
+                            Why Choose Us
+                        </h3>
                         <ul className="space-y-3">
                             {[
                                 "14+ Years of Implant Expertise",
                                 "11,000+ Happy Patients Served",
                                 "600+ Genuine 5-Star Google Reviews",
-                                "Most Affordable Implants — Starting ₹18,000",
+                                "Implants Starting at Just ₹18,000",
                                 "3 Doctors & 4 Assistants In-House",
                                 "Painless & Comfortable Procedures"
                             ].map((item, index) => (
-                                <li key={index} className="flex items-start gap-3 text-lg text-gray-700">
-                                    <span className="text-[var(--brand-gold)] text-xl">✓</span>
+                                <li key={index} className="flex items-center gap-3 text-gray-600">
+                                    <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full flex-shrink-0" />
                                     {item}
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-md">
-                        <h3 className="text-xl md:text-2xl font-bold text-[var(--brand-dark)] mb-4">Our Lead Implantologist</h3>
+                    <div className="bg-[var(--bg-medical-light)] p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <h3 className="text-lg font-bold text-[var(--brand-dark)] mb-5 flex items-center gap-2">
+                            <span className="w-8 h-8 bg-[var(--brand-gold)]/15 rounded-lg flex items-center justify-center">
+                                <svg className="w-4 h-4 text-[var(--brand-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                            </span>
+                            Our Lead Implantologist
+                        </h3>
                         <ul className="space-y-3">
                             {[
                                 "Dr. Mohammad Abbas Noorani",
                                 "Specialist in Implantology",
                                 "14+ Years of Clinical Experience",
-                                "11,000+ Successful Patient Treatments",
-                                "Team: 3 Doctors, 4 Assistants, 1 Receptionist"
+                                "11,000+ Successful Treatments",
+                                "Team of 8 Qualified Professionals"
                             ].map((item, index) => (
-                                <li key={index} className="flex items-start gap-3 text-lg text-gray-700">
-                                    <span className="text-[var(--brand-gold)] text-xl">👨‍⚕️</span>
+                                <li key={index} className="flex items-center gap-3 text-gray-600">
+                                    <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full flex-shrink-0" />
                                     {item}
                                 </li>
                             ))}
@@ -53,21 +62,19 @@ export default function AboutSection() {
                     </div>
                 </div>
 
-                {/* Social Proof Banner */}
-                <div className="bg-gradient-to-r from-[var(--brand-dark)] to-[#4a4a3d] text-white p-8 rounded-2xl text-center">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div>
-                            <p className="text-4xl md:text-5xl font-bold text-[var(--brand-gold)]">14+</p>
-                            <p className="text-lg mt-1">Years of Experience</p>
-                        </div>
-                        <div>
-                            <p className="text-4xl md:text-5xl font-bold text-[var(--brand-gold)]">11,000+</p>
-                            <p className="text-lg mt-1">Happy Patients</p>
-                        </div>
-                        <div>
-                            <p className="text-4xl md:text-5xl font-bold text-[var(--brand-gold)]">600+</p>
-                            <p className="text-lg mt-1">5-Star Google Reviews</p>
-                        </div>
+                {/* Stats Banner */}
+                <div className="bg-gradient-to-r from-[var(--brand-dark)] to-[#102a4a] text-white p-8 md:p-10 rounded-2xl">
+                    <div className="grid grid-cols-3 gap-6 text-center">
+                        {[
+                            { num: "14+", label: "Years Experience" },
+                            { num: "11,000+", label: "Happy Patients" },
+                            { num: "600+", label: "5-Star Reviews" }
+                        ].map((stat, i) => (
+                            <div key={i}>
+                                <p className="text-3xl md:text-5xl font-extrabold text-[var(--brand-gold)]">{stat.num}</p>
+                                <p className="text-sm md:text-base mt-1 text-gray-300 font-light">{stat.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -5,32 +5,39 @@ interface ClinicPhotosProps {
 }
 
 export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
+  const photos = ['clinic1.jpg', 'clininc2.jpg', 'clinic3.jpg', 'clininc4.jpg'];
+
   return (
-    <section className="bg-gray-50 p-4 md:p-12 lg:p-16 relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-64 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
+    <section className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-48 bg-gradient-to-b from-white to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-gray-900 tracking-tight">Our <span className="text-gradient-gold">Modern Clinic</span></h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-          Zahra Dental Clinic & Implant Centre — equipped with the latest technology for safe and comfortable implant procedures.
-        </p>
+        <div className="text-center mb-10">
+          <p className="text-[var(--brand-gold)] text-sm font-semibold uppercase tracking-widest mb-3">Our Space</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-dark)] mb-4">Our <span className="text-gradient-gold">Modern Clinic</span></h2>
+          <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-6" />
+          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+            State-of-the-art facility equipped with the latest technology for safe and comfortable implant procedures.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
-          {['clinic1.jpg', 'clininc2.jpg', 'clinic3.jpg', 'clininc4.jpg'].map((img, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10">
+          {photos.map((img, i) => (
             <div
               key={i}
-              className="group bg-white rounded-2xl h-64 md:h-80 lg:h-96 flex items-center justify-center overflow-hidden relative shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
+              className={`group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer ${
+                i === 0 ? 'md:col-span-2 md:row-span-2 h-64 md:h-full' : 'h-48 md:h-56'
+              }`}
             >
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10 duration-500"></div>
               <Image
                 src={`/images/clinic/${img}`}
-                alt={`Zahra Dental Clinic Photo ${i + 1}`}
+                alt={`Zahra Dental Clinic ${i + 1}`}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority={i <= 2}
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                priority={i === 0}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
@@ -38,9 +45,9 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
         <div className="text-center">
           <button
             onClick={onBookAppointment}
-            className="bg-[var(--brand-dark)] text-white py-4 px-12 rounded-full font-bold text-lg hover:bg-[var(--brand-gold)] hover:shadow-lg transition-all shadow-md transform hover:-translate-y-1"
+            className="bg-[var(--brand-dark)] text-white py-3.5 px-10 rounded-full font-bold hover:bg-[var(--brand-gold)] hover:shadow-lg transition-all shadow-md"
           >
-            Book Your Implant Consultation
+            Visit Our Clinic
           </button>
         </div>
       </div>

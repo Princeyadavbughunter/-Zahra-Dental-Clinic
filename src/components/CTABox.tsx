@@ -4,26 +4,33 @@ interface CTABoxProps {
 
 export default function CTABox({ onBookAppointment }: CTABoxProps) {
   return (
-    <section className="bg-[var(--brand-dark)] text-white p-6 shadow-xl">
-      <h2 className="text-xl font-bold text-center mb-4">
-        <em>Dental Implant Specialists — Trusted by 11,000+ Patients</em>
-      </h2>
-      <hr className="border-[var(--brand-gold)] mb-4 w-1/2 mx-auto" />
+    <section className="relative overflow-hidden">
+      <div className="bg-gradient-to-r from-[var(--brand-dark)] to-[#102a4a] text-white py-12 px-6">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-medium mb-6 border border-white/10">
+            <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full animate-pulse" />
+            Limited Availability
+          </div>
 
-      <p className="text-lg text-white mb-4 text-center">
-        <u><strong>Free Implant Consultation with Dr. Mohammad Abbas Noorani</strong></u>
-      </p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Free Implant Consultation
+          </h2>
+          <p className="text-gray-300 mb-2 text-lg">
+            with <strong className="text-white">Dr. Mohammad Abbas Noorani</strong>
+          </p>
+          <p className="text-[var(--brand-gold)] font-bold text-sm mb-8">
+            ONLY VALID FOR FIRST 10 PATIENTS
+          </p>
 
-      <p className="text-white mb-6 text-center font-bold">
-        <em>&quot;ONLY VALID FOR FIRST 10 PATIENTS&quot;</em>
-      </p>
-
-      <button onClick={onBookAppointment} className="bg-[var(--brand-gold)] text-white py-3 px-6 rounded-lg font-bold w-full hover:bg-[#0097a7] transition-colors">
-        Request a Call back ➤
-      </button>
-      <small className="block text-center mt-2">
-        Implant pricing starting at just ₹18,000
-      </small>
+          <button
+            onClick={onBookAppointment}
+            className="bg-[var(--brand-gold)] text-white py-3.5 px-10 rounded-full font-bold text-lg hover:bg-[#0097a7] transition-all shadow-lg hover:shadow-xl inline-block"
+          >
+            Claim Your Free Consultation
+          </button>
+          <p className="text-gray-400 text-xs mt-4">Implants starting at just ₹18,000</p>
+        </div>
+      </div>
     </section>
   );
 }
