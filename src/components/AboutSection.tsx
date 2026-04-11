@@ -9,7 +9,7 @@ export default function AboutSection() {
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-dark)] mb-6">Zahra Dental Clinic & Implant Centre</h2>
                     <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-8" />
                     <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        Led by <strong className="text-[var(--brand-dark)]">Dr. Mohammad Abbas Noorani</strong>, we are Ahmedabad&apos;s trusted destination for dental implants. With <strong className="text-[var(--brand-dark)]">14+ years of expertise</strong> and a team dedicated to patient comfort, we&apos;ve earned the trust of over 11,000 patients.
+                        Founded in 2011, <strong className="text-[var(--brand-dark)]">Zahra Multi Speciality Dental Clinic</strong> provides excellent dental care with a personal touch. Led by <strong className="text-[var(--brand-dark)]">Dr. Mohammad Abbas Noorani</strong>, our team of specialists ensures high-quality treatment with a gentle, patient-focused approach — committed to making dentistry accessible, convenient, and stress-free for patients from Ahmedabad and across the globe.
                     </p>
                 </div>
 
@@ -23,12 +23,12 @@ export default function AboutSection() {
                         </h3>
                         <ul className="space-y-3">
                             {[
-                                "14+ Years of Implant Expertise",
-                                "11,000+ Happy Patients Served",
-                                "600+ Genuine 5-Star Google Reviews",
-                                "Implants Starting at Just ₹18,000",
-                                "3 Doctors & 4 Assistants In-House",
-                                "Painless & Comfortable Procedures"
+                                "14+ Years of Clinical Experience",
+                                "1,800+ Dental Implants Successfully Placed",
+                                "3,000+ Root Canal Treatments",
+                                "11,000+ Smiling Patients Worldwide",
+                                "Globally Trusted — Canada, Iraq, Kenya & More",
+                                "Affordable, World-Class Dental Care"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3 text-gray-600">
                                     <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full flex-shrink-0" />
@@ -47,11 +47,12 @@ export default function AboutSection() {
                         </h3>
                         <ul className="space-y-3">
                             {[
-                                "Dr. Mohammad Abbas Noorani",
-                                "Specialist in Implantology",
-                                "14+ Years of Clinical Experience",
-                                "11,000+ Successful Treatments",
-                                "Team of 8 Qualified Professionals"
+                                "Dr. Mohammad Abbas Noorani — B.D.S & Certified Implantologist",
+                                "Exclusively Practicing Implant Dentistry",
+                                "Trained by Dr. Palo Malo & in Germany",
+                                "Certified by International Implant Foundation",
+                                "Certified by Immediate Implant & Loading",
+                                "Expert in Conventional & Basal Implants"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3 text-gray-600">
                                     <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full flex-shrink-0" />
@@ -64,14 +65,16 @@ export default function AboutSection() {
 
                 {/* Stats Banner */}
                 <div className="bg-gradient-to-r from-[var(--brand-dark)] to-[#102a4a] text-white p-8 md:p-10 rounded-2xl">
-                    <div className="grid grid-cols-3 gap-6 text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
                         {[
                             { num: "14+", label: "Years Experience" },
-                            { num: "11,000+", label: "Happy Patients" },
-                            { num: "600+", label: "5-Star Reviews" }
+                            { num: "1,800+", label: "Dental Implants" },
+                            { num: "3,000+", label: "Root Canals" },
+                            { num: "500+", label: "Improved Smiles" },
+                            { num: "11,000+", label: "Smiling Patients" }
                         ].map((stat, i) => (
                             <div key={i}>
-                                <p className="text-3xl md:text-5xl font-extrabold text-[var(--brand-gold)]">{stat.num}</p>
+                                <p className="text-3xl md:text-4xl font-extrabold text-[var(--brand-gold)]">{stat.num}</p>
                                 <p className="text-sm md:text-base mt-1 text-gray-300 font-light">{stat.label}</p>
                             </div>
                         ))}

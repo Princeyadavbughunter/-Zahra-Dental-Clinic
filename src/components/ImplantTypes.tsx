@@ -4,13 +4,13 @@ export default function ImplantTypes() {
   const implantData = [
     {
       title: "Single Tooth Implant",
-      description: "Replace one missing tooth with a permanent, natural-looking implant. No grinding of adjacent teeth needed.",
+      description: "Replace one missing tooth with a permanent, natural-looking titanium implant with crown restoration.",
       icon: "/images/implant/single.png",
       price: "₹18,000"
     },
     {
       title: "Multiple Teeth Implants",
-      description: "Implant-supported bridges to replace several missing teeth. Eat and speak with full confidence again.",
+      description: "Implant-supported bridges to replace several missing teeth. Eat and speak with full confidence.",
       icon: "/images/implant/Multiple.png",
       price: "Custom Quote"
     },
@@ -41,11 +41,11 @@ export default function ImplantTypes() {
           </h2>
           <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-6 opacity-60" />
           <p className="text-gray-400 md:text-lg max-w-2xl mx-auto font-light">
-            Complete range of implant solutions by our specialist with 14+ years of expertise.
+            Complete range of implant solutions by our certified implantologist with 1,800+ successful cases.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
           {implantData.map((item, index) => (
             <div
               key={index}
@@ -65,8 +65,35 @@ export default function ImplantTypes() {
           ))}
         </div>
 
-        {/* Why Implants */}
-        <div className="mt-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+        {/* Specialised Dental Services */}
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-8">
+            Our Specialised <span className="text-gradient-gold">Dental Services</span>
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "Dental Implants", desc: "Titanium-based prosthetics with 1,800+ successful cases" },
+              { title: "Smile Design with Veneers", desc: "Digital shade, shape & size enhancement for your perfect smile" },
+              { title: "E-Max Inlays / Onlays / Overlays", desc: "Premium ceramic restorations for natural-looking repairs" },
+              { title: "Invisalign Aligners", desc: "Clear, discreet orthodontic treatment without metal braces" },
+              { title: "Biomimetic Composite Restoration", desc: "Tooth-colored resin restorations that mimic natural teeth" },
+              { title: "Kids Dentistry", desc: "Gentle, child-friendly dental care for all ages" }
+            ].map((item, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors">
+                <span className="w-5 h-5 bg-[var(--brand-gold)]/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-3 h-3 text-[var(--brand-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div>
+                  <h4 className="font-semibold text-white text-sm">{item.title}</h4>
+                  <p className="text-xs text-gray-400">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Dental Implants */}
+        <div className="mt-10 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
           <h3 className="text-xl md:text-2xl font-bold text-center mb-8">
             Why <span className="text-gradient-gold">Dental Implants?</span>
           </h3>

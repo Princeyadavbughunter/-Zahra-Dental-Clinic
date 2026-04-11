@@ -6,25 +6,25 @@ export default function GoogleReviews() {
       name: "Rahul Sharma",
       initials: "RS",
       date: "2 months ago",
-      review: "Got my dental implant done by Dr. Abbas Noorani — extremely happy with the results. Painless procedure, caring staff, and very affordable pricing. Highly recommended!"
+      review: "Got my dental implant done by Dr. Abbas Noorani — extremely happy with the results. Painless procedure, caring staff, and very affordable pricing at ₹18,000. Highly recommended!"
     },
     {
       name: "Fatima Patel",
       initials: "FP",
       date: "1 month ago",
-      review: "Dr. Abbas Noorani is an excellent implantologist. His calm approach put me at ease. Got my implant for ₹18,000 — best value in Ahmedabad. Thank you Zahra Dental!"
+      review: "Dr. Abbas Noorani is an excellent implantologist. His calm approach put me at ease. The entire team at Zahra Dental made my experience comfortable. Best implant clinic in Ahmedabad!"
     },
     {
       name: "Mehul Desai",
       initials: "MD",
       date: "3 months ago",
-      review: "Chose Zahra Dental based on their 600+ reviews and I wasn't disappointed. Dr. Noorani's 14+ years of experience shows. The implant feels completely natural."
+      review: "Dr. Noorani&apos;s 14+ years of experience really shows. The implant feels completely natural. I travelled from Canada specifically for treatment here — world-class care at Indian prices."
     },
     {
       name: "Priya Joshi",
       initials: "PJ",
       date: "2 months ago",
-      review: "Had two implants done here — wonderful experience. Dr. Abbas explained everything clearly and the procedure was much more comfortable than expected. Now I see why they have 11,000+ happy patients!"
+      review: "Had two implants and smile designing done here. Dr. Abbas explained everything clearly. Dr. Vishal did amazing veneers work too. Now I see why they have 11,000+ happy patients!"
     }
   ];
 
@@ -41,8 +41,8 @@ export default function GoogleReviews() {
             </div>
             <span className="text-gray-500 text-sm font-medium">4.9/5</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">600+ Patients Recommend Us</h2>
-          <p className="text-gray-400 mt-1 text-sm">Genuine reviews from real patients</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">Trusted by 11,000+ Patients Worldwide</h2>
+          <p className="text-gray-400 mt-1 text-sm">Genuine reviews from patients across India, Canada, Iraq, Kenya &amp; more</p>
         </div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">

@@ -20,7 +20,6 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Gradient overlay background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-dark)]/5 via-transparent to-[var(--brand-gold)]/5 pointer-events-none" />
 
       <div className="relative p-4 md:p-10 lg:p-16 max-w-7xl mx-auto">
@@ -28,16 +27,16 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 bg-[var(--brand-gold)]/10 border border-[var(--brand-gold)]/20 text-[var(--brand-gold)] px-4 py-1.5 rounded-full text-sm font-medium">
             <span className="w-2 h-2 bg-[var(--brand-gold)] rounded-full animate-pulse" />
-            Trusted by 11,000+ Patients in Ahmedabad
+            Globally Trusted by 11,000+ Patients — India, Canada, Iraq, Kenya & More
           </div>
         </div>
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-center mb-4 leading-tight tracking-tight text-[var(--brand-dark)]">
-          Get Your Perfect Smile With<br />
-          <span className="text-gradient-gold">Dental Implants</span>
+          Get the Smile You&apos;ve<br />
+          Always Wanted with <span className="text-gradient-gold">Dental Implants</span>
         </h1>
         <p className="text-center text-gray-500 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-          600+ genuine 5-star Google reviews. Implants starting at just <strong className="text-[var(--brand-dark)]">₹18,000</strong>.
+          1800+ implants placed by a certified implantologist. World-class dental care at affordable prices starting at just <strong className="text-[var(--brand-dark)]">&#8377;18,000</strong>.
         </p>
 
         {/* Hero Cards */}
@@ -53,10 +52,8 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               playsInline
               src="/videos/A Space created for comfort, and care trusted by our patients. Zahra Dental  Clinic & Implant C.mp4"
             />
-            {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
-            {/* Mute/Unmute Button */}
             <button
               onClick={toggleMute}
               className="absolute bottom-4 right-4 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white p-2.5 rounded-full transition-all duration-300 border border-white/30"
@@ -69,7 +66,6 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               )}
             </button>
 
-            {/* Bottom text on video */}
             <div className="absolute bottom-4 left-4 z-10">
               <p className="text-white/80 text-xs font-medium">Zahra Dental Clinic & Implant Centre</p>
             </div>
@@ -86,11 +82,11 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               <h2 className="text-2xl md:text-3xl font-bold mb-2 tracking-wide">Dental Implants</h2>
               <div className="w-12 h-0.5 bg-[var(--brand-gold)] mx-auto rounded-full mb-5 opacity-60" />
               <p className="text-4xl md:text-6xl font-extrabold mb-1 text-white">
-                ₹18,000
+                &#8377;18,000
               </p>
               <p className="text-base font-light mb-2 text-gray-300">per implant</p>
               <p className="text-xs mb-8 text-gray-400 border-t border-white/10 pt-4 mt-2">
-                Most affordable in Ahmedabad. 14+ years expertise.
+                World-class care at affordable prices. Certified Implantologist.
               </p>
 
               <button
@@ -113,27 +109,26 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             Book Consultation
           </button>
           <a
-            href="tel:+919277756167"
+            href="tel:+919638787144"
             className="bg-white text-[var(--brand-dark)] border-2 border-gray-200 py-3.5 px-10 rounded-full font-bold text-base text-center shadow-sm hover:border-[var(--brand-gold)] hover:-translate-y-0.5 transition-all md:min-w-[220px]"
           >
-            Call Now
+            Call: +91 9638787144
           </a>
         </div>
 
-        {/* Why Choose Us */}
+        {/* Stats Grid */}
         <div className="mb-14">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-[var(--brand-dark)] mb-8">
             Why Patients Choose <span className="text-gradient-gold">Zahra Dental</span>
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
             {[
-              { icon: "/images/heroicons/Experience.png", title: "14+ Years", desc: "Expert experience" },
-              { icon: "/images/heroicons/premium.png", title: "11,000+", desc: "Happy patients" },
-              { icon: "/images/heroicons/team.png", title: "3 Doctors", desc: "Specialist team" },
-              { icon: "/images/heroicons/sterilization.png", title: "600+ Reviews", desc: "5-star rated" },
-              { icon: "/images/heroicons/tech.png", title: "₹18,000", desc: "Affordable implants" },
-              { icon: "/images/heroicons/painless.png", title: "Painless", desc: "Gentle procedures" }
+              { icon: "/images/heroicons/Experience.png", title: "14+ Years", desc: "Clinical experience" },
+              { icon: "/images/heroicons/premium.png", title: "1,800+", desc: "Dental implants" },
+              { icon: "/images/heroicons/team.png", title: "3,000+", desc: "Root canals" },
+              { icon: "/images/heroicons/sterilization.png", title: "11,000+", desc: "Smiling patients" },
+              { icon: "/images/heroicons/painless.png", title: "500+", desc: "Improved smiles" }
             ].map((usp, index) => (
               <div
                 key={index}
@@ -149,17 +144,35 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           </div>
         </div>
 
+        {/* Dental Tourism CTA */}
+        <div className="bg-gradient-to-r from-[var(--brand-dark)] to-[#102a4a] p-6 md:p-10 rounded-2xl shadow-lg md:max-w-4xl md:mx-auto mb-14">
+          <div className="text-center">
+            <p className="text-[var(--brand-gold)] text-xs font-semibold uppercase tracking-widest mb-2">Dental Tourism</p>
+            <h3 className="font-bold text-white mb-3 text-xl md:text-2xl">World-Class Dental Care at Affordable Prices</h3>
+            <p className="text-gray-400 text-sm mb-6 max-w-2xl mx-auto">
+              Patients from Canada, Iraq, Kenya and across the globe trust Zahra Dental for implant dentistry. Advanced technology, international standards, and savings of up to 70% compared to Western countries.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["India", "Canada", "Iraq", "Kenya", "& More"].map((country, i) => (
+                <span key={i} className="bg-white/10 text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/10">
+                  {country}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Trust Section */}
         <div className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100 md:max-w-4xl md:mx-auto">
           <h3 className="font-bold text-[var(--brand-dark)] mb-6 text-xl md:text-2xl text-center">Our Commitment to Your Smile</h3>
           <ul className="grid md:grid-cols-2 gap-3">
             {[
-              { text: "14+ Years of Excellence in dental implants & oral care." },
-              { text: "600+ genuine 5-star Google reviews from real patients." },
+              { text: "Certified Implantologist trained by Dr. Palo Malo & in Germany." },
+              { text: "1,800+ dental implants successfully placed over 14+ years." },
               { text: "Most affordable implant pricing starting at ₹18,000." },
-              { text: "3 experienced doctors with 4 trained assistants." },
-              { text: "Specialist in Implantology — not general guesswork." },
-              { text: "Convenient morning & evening hours, Mon–Sat." }
+              { text: "Globally trusted — patients from India, Canada, Iraq, Kenya." },
+              { text: "Certified by International Implant Foundation." },
+              { text: "Morning 9:00 AM–1:00 PM & Evening 4:00 PM–8:00 PM, Mon–Sat." }
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
                 <span className="w-5 h-5 bg-[var(--brand-gold)]/15 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

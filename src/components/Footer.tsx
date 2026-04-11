@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Ahmedabad&apos;s trusted destination for dental implants. 14+ years of excellence serving 11,000+ happy patients.
+              Ahmedabad&apos;s trusted destination for dental implants since 2011. 14+ years of excellence serving 11,000+ happy patients from India &amp; across the globe.
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -28,6 +28,9 @@ export default function Footer() {
               <a href="https://www.instagram.com/zahra_dental_clinic/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--brand-gold)] transition-all duration-300 group">
                 <svg className="w-4 h-4 text-gray-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
               </a>
+              <a href="https://www.youtube.com/@zahradentalclinic1939" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--brand-gold)] transition-all duration-300 group">
+                <svg className="w-4 h-4 text-gray-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
             </div>
           </div>
 
@@ -35,9 +38,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-sm uppercase tracking-wider text-[var(--brand-gold)] mb-4">Contact</h3>
             <div className="space-y-3">
-              <a href="tel:+919277756167" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">+91 9277756167</a>
-              <a href="tel:+919638787144" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">+91 9638787144</a>
-              <a href="mailto:drabbasnoorani@gmail.com" className="block text-gray-400 hover:text-white transition-colors text-sm">drabbasnoorani@gmail.com</a>
+              <a href="tel:+919638787144" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">(+91) 9638787144</a>
+              <a href="mailto:drabbas@ezahradental.com" className="block text-gray-400 hover:text-white transition-colors text-sm">drabbas@ezahradental.com</a>
+              <a href="https://www.ezahradental.com" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-[var(--brand-gold)] transition-colors text-sm">www.ezahradental.com</a>
             </div>
           </div>
 
@@ -52,7 +55,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <span className="w-1.5 h-1.5 bg-[var(--brand-gold)] rounded-full" />
-                Evening: 4:00 PM – 8:30 PM
+                Evening: 4:00 PM – 8:00 PM
               </div>
             </div>
           </div>
@@ -66,9 +69,20 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors text-sm leading-relaxed block"
             >
-              Zahra Dental Clinic, APMC Market, Below APMC Clock Tower, Near Vishala Circle, Ahmedabad – 380055
+              Zahra Dental Clinic &amp; Implant Centre, B/20, Below APMC Clock Tower, Nr SBI Bank Vasna, Ahmedabad – 380055, Gujarat, India
             </a>
-            <p className="text-xs text-gray-500 mt-2">Near SBI Bank, Opp. Yalla Chicken</p>
+          </div>
+        </div>
+
+        {/* Trusted Brands */}
+        <div className="border-t border-white/10 pt-8 mb-10">
+          <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-5">Trusted Implant Partners & Associates</p>
+          <div className="flex flex-wrap justify-center gap-6 text-gray-500 text-xs font-medium">
+            {["Straumann", "Nobel Biocare", "Ostem Implant", "Dentsply Sirona", "3M Science", "Colgate"].map((brand, i) => (
+              <span key={i} className="bg-white/5 px-4 py-2 rounded-full border border-white/10 hover:text-[var(--brand-gold)] transition-colors">
+                {brand}
+              </span>
+            ))}
           </div>
         </div>
 
@@ -93,6 +107,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <a href="https://www.facebook.com/DrMohammadAbbasNoorani/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-gold)] transition-colors">Facebook</a>
             <a href="https://www.instagram.com/zahra_dental_clinic/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-gold)] transition-colors">Instagram</a>
+            <a href="https://www.youtube.com/@zahradentalclinic1939" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--brand-gold)] transition-colors">YouTube</a>
           </div>
         </div>
       </div>

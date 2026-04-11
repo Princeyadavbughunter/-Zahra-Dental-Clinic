@@ -18,6 +18,7 @@ export default function CTABox({ onBookAppointment }: CTABoxProps) {
           <p className="text-gray-300 mb-2 text-lg">
             with <strong className="text-white">Dr. Mohammad Abbas Noorani</strong>
           </p>
+          <p className="text-gray-400 text-sm mb-2">B.D.S & Certified Implantologist | 14+ Years Experience</p>
           <p className="text-[var(--brand-gold)] font-bold text-sm mb-8">
             ONLY VALID FOR FIRST 10 PATIENTS
           </p>
@@ -28,7 +29,7 @@ export default function CTABox({ onBookAppointment }: CTABoxProps) {
           >
             Claim Your Free Consultation
           </button>
-          <p className="text-gray-400 text-xs mt-4">Implants starting at just ₹18,000</p>
+          <p className="text-gray-400 text-xs mt-4">Implants starting at just ₹18,000 | No hidden charges</p>
         </div>
       </div>
     </section>
