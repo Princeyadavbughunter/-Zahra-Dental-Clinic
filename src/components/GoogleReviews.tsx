@@ -3,28 +3,28 @@ import Image from "next/image";
 export default function GoogleReviews() {
   const reviews = [
     {
-      name: "Rahul Sharma",
-      initials: "RS",
-      date: "2 months ago",
-      review: "Got my dental implant done by Dr. Abbas Noorani — extremely happy with the results. Painless procedure, caring staff, and very affordable pricing at ₹18,000. Highly recommended!"
+      name: "Syed Rizvi",
+      initials: "SR",
+      date: "Google Review",
+      review: "I had an excellent experience at Zahra Dental Clinic, Ahmedabad. I got my dental implant and fixing done here, and I am extremely satisfied with the results. Dr. Mohammad Abbas Noorani and Dr. Patel are highly skilled, professional, and very patient. The clinic is clean, well-organized, and equipped with modern technology. The staff is polite, supportive, and punctual. I would highly recommend Zahra Dental Clinic to anyone looking for reliable and quality dental treatment."
     },
     {
-      name: "Fatima Patel",
-      initials: "FP",
-      date: "1 month ago",
-      review: "Dr. Abbas Noorani is an excellent implantologist. His calm approach put me at ease. The entire team at Zahra Dental made my experience comfortable. Best implant clinic in Ahmedabad!"
+      name: "Anas Syed",
+      initials: "AS",
+      date: "Google Review",
+      review: "I underwent orthodontic treatment with Dr. Jasmine for my dental issues, as my teeth were uneven and my upper two teeth were too forward. The entire treatment took about 2 years, and my experience was excellent throughout. The results are amazing — my facial appearance has changed drastically in a positive way. I highly recommend Zahra Dental Clinic and especially Dr. Jasmine!"
     },
     {
-      name: "Mehul Desai",
-      initials: "MD",
-      date: "3 months ago",
-      review: "Dr. Noorani&apos;s 14+ years of experience really shows. The implant feels completely natural. I travelled from Canada specifically for treatment here — world-class care at Indian prices."
+      name: "Azad Housna",
+      initials: "AH",
+      date: "Google Review",
+      review: "I am from Madagascar and I came here at Zahra Dental Clinic for my dental treatment and I am very satisfied with the treatment. Dr. Nida did my treatment so professionally and calmly. The staff here is also very helpful and kind. I recommend Zahra Dental Clinic to everyone to visit once for any dental treatment."
     },
     {
-      name: "Priya Joshi",
-      initials: "PJ",
-      date: "2 months ago",
-      review: "Had two implants and smile designing done here. Dr. Abbas explained everything clearly. Dr. Vishal did amazing veneers work too. Now I see why they have 11,000+ happy patients!"
+      name: "Hasamali Momin",
+      initials: "HM",
+      date: "Google Review",
+      review: "The treatment was very comfortable, all hygiene protocols were followed, and I feel very satisfied having my treatment of implants done at Zahra Dental Clinic. Everyone at the clinic was very welcoming."
     }
   ];
 

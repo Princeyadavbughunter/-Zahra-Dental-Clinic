@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="bg-white rounded-xl p-3 inline-block mb-4">
               <Image
-                src="/images/zahra.jpg"
+                src="/zdc_logo.png"
                 alt="Zahra Dental Clinic"
                 width={200}
                 height={50}

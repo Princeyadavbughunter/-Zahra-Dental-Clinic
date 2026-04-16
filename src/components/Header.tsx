@@ -48,7 +48,7 @@ export default function Header({ onBookAppointment }: HeaderProps) {
           {/* Left - Logo + Address */}
           <div className="flex items-center gap-6">
             <Image
-              src="/images/zahra.jpg"
+              src="/zdc_logo.png"
               alt="Zahra Dental Clinic & Implant Centre"
               width={200}
               height={50}
