@@ -9,6 +9,18 @@ export default function GoogleReviews() {
       review: "I had an excellent experience at Zahra Dental Clinic, Ahmedabad. I got my dental implant and fixing done here, and I am extremely satisfied with the results. Dr. Mohammad Abbas Noorani and Dr. Patel are highly skilled, professional, and very patient. They explained the entire procedure clearly and made sure I was comfortable throughout the treatment. The clinic is clean, well-organized, and equipped with modern technology. The staff is polite, supportive, and punctual. I would highly recommend Zahra Dental Clinic to anyone looking for reliable and quality dental implant treatment."
     },
     {
+      name: "Ali Nirban",
+      initials: "AN",
+      date: "Google Review",
+      review: "I was in Rajasthan when I experienced severe dental pain. After coming here to Zahra Dental Clinic, my problematic teeth were removed, and dental implants were placed. Within just 7 days, I even received my new teeth on those implants. I am extremely satisfied with my treatment, and throughout the entire procedure, I did not experience any discomfort. I highly recommend Zahra Dental Clinic to anyone seeking a reliable solution for all their dental concerns."
+    },
+    {
+      name: "Shabnam Hirdjee Djina",
+      initials: "SD",
+      date: "Google Review",
+      review: "I came all the way from Reunion, Africa, to get my dental implants and full mouth crown done here about 6 years ago. Till today I have had absolutely no pain or problems — everything is perfect and feels natural. I am very happy with the treatment and the long-term results. I highly recommend this clinic to everyone who is looking for professional and reliable dental care."
+    },
+    {
       name: "Hasamali Momin",
       initials: "HM",
       date: "Google Review",

@@ -16,6 +16,12 @@ const images = [
   { src: "/images/results/A-3.jpg", label: "After" },
   { src: "/images/results/b-4.jpg", label: "Before" },
   { src: "/images/results/a-4.jpg", label: "After" },
+  { src: "/images/results/B-5.jpg", label: "Before" },
+  { src: "/images/results/a-5.jpg", label: "After" },
+  { src: "/images/results/B-6.jpg", label: "Before" },
+  { src: "/images/results/a-6.jpg", label: "After" },
+  { src: "/images/results/b-7.jpg", label: "Before" },
+  { src: "/images/results/a-7.jpg", label: "After" },
 ];
 
 export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGalleryProps) {

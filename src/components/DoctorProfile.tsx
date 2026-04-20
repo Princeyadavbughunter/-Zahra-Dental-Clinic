@@ -74,6 +74,40 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
           </div>
         </div>
 
+        {/* Our Team */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <p className="text-[var(--brand-gold)] text-sm font-semibold uppercase tracking-widest mb-3">Meet The Team</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)] mb-3">
+              Our Dedicated <span className="text-gradient-gold">Dental Team</span>
+            </h3>
+            <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-4" />
+            <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+              A team of skilled specialists and caring support staff committed to making your experience at Zahra Dental Clinic comfortable, safe and stress-free.
+            </p>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <div className="relative overflow-hidden group">
+              <img
+                src="/dr/team.JPG"
+                alt="Zahra Dental Clinic Team"
+                className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"
+              />
+              {/* Desktop overlay only */}
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/35 to-transparent p-6 md:p-8">
+                <p className="text-white font-bold text-xl">The Zahra Dental Family</p>
+                <p className="text-gray-200 text-sm mt-1">Specialists, hygienists & support staff working together for your smile</p>
+              </div>
+            </div>
+            {/* Mobile caption below image */}
+            <div className="md:hidden bg-[var(--brand-dark)] text-white p-5 text-center">
+              <p className="font-bold text-base">The Zahra Dental Family</p>
+              <p className="text-gray-300 text-xs mt-1">Specialists, hygienists & support staff working together for your smile</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
