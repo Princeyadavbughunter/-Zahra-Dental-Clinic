@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Zahra Dental Clinic & Implant Centre | Best Dental Implants in Ahmedabad | Dr. Abbas Noorani",
-  description: "Dr. Mohammad Abbas Noorani - Certified Implantologist with 14+ years experience. 1,800+ dental implants, 11,000+ patients. Globally trusted. Implants starting at ₹18,000. Book: (+91) 9638787144",
+  description: "Dr. Mohammad Abbas Noorani - Certified Implantologist with 14+ years experience. 1,800+ dental implants, 11,000+ patients. Globally trusted across 15+ countries. Implants from ₹18,000 (Roott) to ₹40,000 (Straumann). Book: (+91) 9638787144",
   keywords: "dental implants Ahmedabad, implant centre Gujarat, Dr. Abbas Noorani, Certified Implantologist, Dental Implants, Zahra Dental Clinic, Ahmedabad Dentist, affordable implants, dental tourism India, basal implants, smile design veneers",
   authors: [{ name: "Dr. Mohammad Abbas Noorani" }],
   creator: "Zahra Dental Clinic & Implant Centre",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Zahra Dental Clinic & Implant Centre | Best Dental Implants in Ahmedabad",
-    description: "Dr. Mohammad Abbas Noorani - Certified Implantologist with 14+ years experience. 1,800+ implants, 11,000+ patients. Globally trusted dental implants in Ahmedabad starting at ₹18,000.",
+    description: "Dr. Mohammad Abbas Noorani - Certified Implantologist with 14+ years experience. 1,800+ implants, 11,000+ patients. Globally trusted dental implants in Ahmedabad — Roott from ₹18,000, Straumann from ₹40,000.",
     url: 'https://ezahradental.com/',
     siteName: "Zahra Dental Clinic & Implant Centre",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Zahra Dental Clinic & Implant Centre",
-    description: "Trusted by 11,000+ patients globally. 1,800+ implants placed. Dental implants starting at ₹18,000 in Ahmedabad by Certified Implantologist.",
+    description: "Trusted by 11,000+ patients from 15+ countries. 1,800+ implants placed. Roott implants from ₹18,000, Straumann from ₹40,000 in Ahmedabad by Certified Implantologist.",
     images: ['/og-image.jpg'],
   },
   robots: {

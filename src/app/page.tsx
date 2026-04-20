@@ -84,8 +84,8 @@ export default function Home() {
         <Header onBookAppointment={openPopup} />
         <HeroSection onBookAppointment={openPopup} />
         <AboutSection />
-        <ImplantTypes />
         <BeforeAfterGallery onBookAppointment={openPopup} />
+        <ImplantTypes />
         <CTABox onBookAppointment={openPopup} />
         <GoogleReviews />
         <DoctorProfile onBookAppointment={openPopup} />

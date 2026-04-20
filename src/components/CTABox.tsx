@@ -29,7 +29,7 @@ export default function CTABox({ onBookAppointment }: CTABoxProps) {
           >
             Claim Your Free Consultation
           </button>
-          <p className="text-gray-400 text-xs mt-4">Implants starting at just ₹18,000 | No hidden charges</p>
+          <p className="text-gray-400 text-xs mt-4">Implants from ₹18,000 (Roott) to ₹40,000 (Straumann) | No hidden charges</p>
         </div>
       </div>
     </section>

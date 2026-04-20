@@ -12,7 +12,7 @@ export default function FAQSection() {
     },
     {
       question: "How much do implants cost at Zahra Dental?",
-      answer: "Dental implants start at just ₹18,000 per implant — one of the most affordable options in Ahmedabad with world-class quality. We use trusted brands like Straumann, Nobel Biocare, and Ostem. Book a free consultation with Dr. Abbas Noorani for an accurate quote."
+      answer: "We offer a wide range of implant options to suit every budget. Roott implants start at just ₹18,000, while premium Straumann implants are available from around ₹40,000. We also work with Nobel Biocare, Osstem, and other trusted brands. Book a free consultation with Dr. Abbas Noorani for an accurate quote based on your needs."
     },
     {
       question: "How long do dental implants last?",
@@ -32,7 +32,7 @@ export default function FAQSection() {
     },
     {
       question: "Do you treat international patients?",
-      answer: "Yes! We are globally trusted by patients from Canada, Iraq, Kenya, and many other countries. We offer dental tourism packages with world-class care at affordable Indian prices. Contact us at drabbas@ezahradental.com for international patient inquiries."
+      answer: "Yes! We are globally trusted by patients from 15+ countries including U.S.A., UK, Australia, France, Canada, Iraq, Iran, U.A.E., Oman, Saudi Arabia, Qatar, Tanzania, Madagascar and more. We offer dental tourism packages with world-class care at affordable Indian prices. Contact us at drabbas@ezahradental.com for international patient inquiries."
     },
     {
       question: "What other services do you offer?",

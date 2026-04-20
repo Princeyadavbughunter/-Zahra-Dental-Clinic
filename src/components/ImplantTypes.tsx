@@ -4,9 +4,9 @@ export default function ImplantTypes() {
   const implantData = [
     {
       title: "Single Tooth Implant",
-      description: "Replace one missing tooth with a permanent, natural-looking titanium implant with crown restoration.",
+      description: "Replace one missing tooth with a permanent, natural-looking titanium implant with crown restoration. Roott from ₹18,000, Straumann from ₹40,000.",
       icon: "/images/implant/single.png",
-      price: "₹18,000"
+      price: "From ₹18,000"
     },
     {
       title: "Multiple Teeth Implants",

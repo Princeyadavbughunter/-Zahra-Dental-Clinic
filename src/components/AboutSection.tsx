@@ -27,7 +27,7 @@ export default function AboutSection() {
                                 "1,800+ Dental Implants Successfully Placed",
                                 "3,000+ Root Canal Treatments",
                                 "11,000+ Smiling Patients Worldwide",
-                                "Globally Trusted — Canada, Iraq, Kenya & More",
+                                "Globally Trusted — 15+ Countries (U.S.A., UK, Canada, U.A.E., Saudi Arabia, Qatar & More)",
                                 "Affordable, World-Class Dental Care"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3 text-gray-600">

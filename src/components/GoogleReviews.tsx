@@ -6,19 +6,7 @@ export default function GoogleReviews() {
       name: "Syed Rizvi",
       initials: "SR",
       date: "Google Review",
-      review: "I had an excellent experience at Zahra Dental Clinic, Ahmedabad. I got my dental implant and fixing done here, and I am extremely satisfied with the results. Dr. Mohammad Abbas Noorani and Dr. Patel are highly skilled, professional, and very patient. The clinic is clean, well-organized, and equipped with modern technology. The staff is polite, supportive, and punctual. I would highly recommend Zahra Dental Clinic to anyone looking for reliable and quality dental treatment."
-    },
-    {
-      name: "Anas Syed",
-      initials: "AS",
-      date: "Google Review",
-      review: "I underwent orthodontic treatment with Dr. Jasmine for my dental issues, as my teeth were uneven and my upper two teeth were too forward. The entire treatment took about 2 years, and my experience was excellent throughout. The results are amazing — my facial appearance has changed drastically in a positive way. I highly recommend Zahra Dental Clinic and especially Dr. Jasmine!"
-    },
-    {
-      name: "Azad Housna",
-      initials: "AH",
-      date: "Google Review",
-      review: "I am from Madagascar and I came here at Zahra Dental Clinic for my dental treatment and I am very satisfied with the treatment. Dr. Nida did my treatment so professionally and calmly. The staff here is also very helpful and kind. I recommend Zahra Dental Clinic to everyone to visit once for any dental treatment."
+      review: "I had an excellent experience at Zahra Dental Clinic, Ahmedabad. I got my dental implant and fixing done here, and I am extremely satisfied with the results. Dr. Mohammad Abbas Noorani and Dr. Patel are highly skilled, professional, and very patient. They explained the entire procedure clearly and made sure I was comfortable throughout the treatment. The clinic is clean, well-organized, and equipped with modern technology. The staff is polite, supportive, and punctual. I would highly recommend Zahra Dental Clinic to anyone looking for reliable and quality dental implant treatment."
     },
     {
       name: "Hasamali Momin",
@@ -41,11 +29,11 @@ export default function GoogleReviews() {
             </div>
             <span className="text-gray-500 text-sm font-medium">4.9/5</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">Trusted by 11,000+ Patients Worldwide</h2>
-          <p className="text-gray-400 mt-1 text-sm">Genuine reviews from patients across India, Canada, Iraq, Kenya &amp; more</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">Implant Reviews from Real Patients</h2>
+          <p className="text-gray-400 mt-1 text-sm">Genuine Google reviews from our implant patients</p>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {reviews.map((review, index) => (
             <div key={index} className="bg-[var(--bg-medical-light)] rounded-xl p-5 hover:shadow-md transition-all duration-300 border border-gray-100 group">
               <div className="flex items-center gap-3 mb-3">

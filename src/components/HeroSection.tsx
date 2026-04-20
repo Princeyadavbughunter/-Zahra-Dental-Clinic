@@ -36,7 +36,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           Always Wanted with <span className="text-gradient-gold">Dental Implants</span>
         </h1>
         <p className="text-center text-gray-500 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-          1800+ implants placed by a certified implantologist. World-class dental care at affordable prices starting at just <strong className="text-[var(--brand-dark)]">&#8377;18,000</strong>.
+          1800+ implants placed by a certified implantologist. World-class dental care at every budget — Roott implants from <strong className="text-[var(--brand-dark)]">&#8377;18,000</strong>, premium Straumann from <strong className="text-[var(--brand-dark)]">&#8377;40,000</strong>.
         </p>
 
         {/* Hero Cards */}
@@ -82,11 +82,11 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               <h2 className="text-2xl md:text-3xl font-bold mb-2 tracking-wide">Dental Implants</h2>
               <div className="w-12 h-0.5 bg-[var(--brand-gold)] mx-auto rounded-full mb-5 opacity-60" />
               <p className="text-4xl md:text-6xl font-extrabold mb-1 text-white">
-                &#8377;18,000
+                From &#8377;18,000
               </p>
-              <p className="text-base font-light mb-2 text-gray-300">per implant</p>
+              <p className="text-base font-light mb-2 text-gray-300">per implant (Roott)</p>
               <p className="text-xs mb-8 text-gray-400 border-t border-white/10 pt-4 mt-2">
-                World-class care at affordable prices. Certified Implantologist.
+                Premium Straumann implants from &#8377;40,000. Multiple options for every budget.
               </p>
 
               <button
@@ -150,10 +150,10 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             <p className="text-[var(--brand-gold)] text-xs font-semibold uppercase tracking-widest mb-2">Dental Tourism</p>
             <h3 className="font-bold text-white mb-3 text-xl md:text-2xl">World-Class Dental Care at Affordable Prices</h3>
             <p className="text-gray-400 text-sm mb-6 max-w-2xl mx-auto">
-              Patients from Canada, Iraq, Kenya and across the globe trust Zahra Dental for implant dentistry. Advanced technology, international standards, and savings of up to 70% compared to Western countries.
+              Patients from <strong className="text-white">15+ countries</strong> including U.S.A., UK, Australia, France, Canada, Iraq, Iran, U.A.E., Oman, Saudi Arabia, Qatar, Tanzania, Madagascar and more trust Zahra Dental for implant dentistry. Advanced technology, international standards, and savings of up to 70% compared to Western countries.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["India", "Canada", "Iraq", "Kenya", "& More"].map((country, i) => (
+              {["U.S.A.", "UK", "Australia", "France", "Canada", "Iraq", "Iran", "U.A.E.", "Oman", "Saudi Arabia", "Qatar", "Tanzania", "Madagascar", "& More"].map((country, i) => (
                 <span key={i} className="bg-white/10 text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/10">
                   {country}
                 </span>
@@ -169,8 +169,8 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             {[
               { text: "Certified Implantologist trained by Dr. Palo Malo." },
               { text: "1,800+ dental implants successfully placed over 14+ years." },
-              { text: "Most affordable implant pricing starting at ₹18,000." },
-              { text: "Globally trusted — patients from India, Canada, Iraq, Kenya." },
+              { text: "Implant options for every budget — Roott from ₹18,000, Straumann from ₹40,000." },
+              { text: "Globally trusted — patients from 15+ countries including U.S.A., UK, Canada, U.A.E., Saudi Arabia." },
               { text: "Certified by International Implant Foundation." },
               { text: "Morning 9:00 AM–1:00 PM & Evening 4:00 PM–8:00 PM, Mon–Sat." }
             ].map((item, i) => (
