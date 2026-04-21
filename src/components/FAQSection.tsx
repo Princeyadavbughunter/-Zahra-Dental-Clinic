@@ -12,7 +12,7 @@ export default function FAQSection() {
     },
     {
       question: "How much do implants cost at Zahra Dental?",
-      answer: "We offer a wide range of implant options to suit every budget. Roott implants start at just ₹18,000, while premium Straumann implants are available from around ₹40,000. We also work with Nobel Biocare, Osstem, and other trusted brands. Book a free consultation with Dr. Abbas Noorani for an accurate quote based on your needs."
+      answer: "We offer a wide range of implant options to suit every budget. Root implants start at just ₹18,000, while premium Straumann implants are available from around ₹40,000. We also work with Nobel Biocare, Osstem, and other trusted brands. Book a free consultation with Dr. Abbas Noorani for an accurate quote based on your needs."
     },
     {
       question: "How long do dental implants last?",

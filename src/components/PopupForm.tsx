@@ -121,7 +121,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
             </button>
 
             <p className="text-center text-[10px] text-gray-400">
-              Implants from ₹18,000 (Roott) up to ₹40,000 (Straumann). No hidden charges.
+              Implants from ₹18,000 (Root) up to ₹40,000 (Straumann). No hidden charges.
             </p>
           </form>
         </div>

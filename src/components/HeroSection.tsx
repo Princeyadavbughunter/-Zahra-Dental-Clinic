@@ -36,7 +36,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           Always Wanted with <span className="text-gradient-gold">Dental Implants</span>
         </h1>
         <p className="text-center text-gray-500 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-          1800+ implants placed by a certified implantologist. World-class dental care at every budget — Roott implants from <strong className="text-[var(--brand-dark)]">&#8377;18,000</strong>, premium Straumann from <strong className="text-[var(--brand-dark)]">&#8377;40,000</strong>.
+          1800+ implants placed by a certified implantologist. World-class dental care at every budget — Root implants from <strong className="text-[var(--brand-dark)]">&#8377;18,000</strong>, premium Straumann from <strong className="text-[var(--brand-dark)]">&#8377;40,000</strong>.
         </p>
 
         {/* Hero Cards */}
@@ -84,7 +84,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
               <p className="text-4xl md:text-6xl font-extrabold mb-1 text-white">
                 From &#8377;18,000
               </p>
-              <p className="text-base font-light mb-2 text-gray-300">per implant (Roott)</p>
+              <p className="text-base font-light mb-2 text-gray-300">per implant (Root)</p>
               <p className="text-xs mb-8 text-gray-400 border-t border-white/10 pt-4 mt-2">
                 Premium Straumann implants from &#8377;40,000. Multiple options for every budget.
               </p>
@@ -169,7 +169,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             {[
               { text: "Certified Implantologist trained by Dr. Palo Malo." },
               { text: "1,800+ dental implants successfully placed over 14+ years." },
-              { text: "Implant options for every budget — Roott from ₹18,000, Straumann from ₹40,000." },
+              { text: "Implant options for every budget — Root from ₹18,000, Straumann from ₹40,000." },
               { text: "Globally trusted — patients from 15+ countries including U.S.A., UK, Canada, U.A.E., Saudi Arabia." },
               { text: "Certified by International Implant Foundation." },
               { text: "Morning 9:00 AM–1:00 PM & Evening 4:00 PM–8:00 PM, Mon–Sat." }

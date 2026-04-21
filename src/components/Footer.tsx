@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 mb-10">
           <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-5">Trusted Implant Partners & Associates</p>
           <div className="flex flex-wrap justify-center gap-6 text-gray-500 text-xs font-medium">
-            {["Straumann", "Nobel Biocare", "Osstem Implant", "Roott", "Dentsply Sirona", "3M Science"].map((brand, i) => (
+            {["Straumann", "Nobel Biocare", "Osstem Implant", "Root", "Dentsply Sirona", "3M Science"].map((brand, i) => (
               <span key={i} className="bg-white/5 px-4 py-2 rounded-full border border-white/10 hover:text-[var(--brand-gold)] transition-colors">
                 {brand}
               </span>

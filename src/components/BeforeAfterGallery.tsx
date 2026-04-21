@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface BeforeAfterGalleryProps {
   onBookAppointment: () => void;
@@ -26,11 +26,6 @@ const images = [
 
 export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGalleryProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const dragStart = useRef({ x: 0, scrollLeft: 0 });
-  const userInteractingRef = useRef(false);
-  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
   const allImages = [...images, ...images];
 
   useEffect(() => {
@@ -38,60 +33,48 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
     if (!container) return;
 
     let raf = 0;
+    let userPaused = false;
+    let resumeTimer: ReturnType<typeof setTimeout> | null = null;
+    let expectedScrollLeft = 0;
+
     const tick = () => {
-      if (!userInteractingRef.current && container) {
+      if (!userPaused) {
         container.scrollLeft += 0.8;
         const half = container.scrollWidth / 2;
         if (container.scrollLeft >= half) {
           container.scrollLeft -= half;
         }
+        expectedScrollLeft = container.scrollLeft;
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
 
-    const pauseAutoScroll = () => {
-      userInteractingRef.current = true;
-      if (resumeTimer.current) clearTimeout(resumeTimer.current);
-      resumeTimer.current = setTimeout(() => {
-        userInteractingRef.current = false;
-      }, 1800);
+    const pause = () => {
+      userPaused = true;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        userPaused = false;
+        expectedScrollLeft = container.scrollLeft;
+      }, 1500);
     };
 
-    container.addEventListener('wheel', pauseAutoScroll, { passive: true });
-    container.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+    const handleScroll = () => {
+      if (Math.abs(container.scrollLeft - expectedScrollLeft) > 3) {
+        pause();
+      }
+    };
+
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    container.addEventListener('wheel', pause, { passive: true });
 
     return () => {
       cancelAnimationFrame(raf);
-      if (resumeTimer.current) clearTimeout(resumeTimer.current);
-      container.removeEventListener('wheel', pauseAutoScroll);
-      container.removeEventListener('touchstart', pauseAutoScroll);
+      if (resumeTimer) clearTimeout(resumeTimer);
+      container.removeEventListener('scroll', handleScroll);
+      container.removeEventListener('wheel', pause);
     };
   }, []);
-
-  const handlePointerDown = (e: React.PointerEvent) => {
-    if (!scrollRef.current) return;
-    setIsDragging(true);
-    userInteractingRef.current = true;
-    if (resumeTimer.current) clearTimeout(resumeTimer.current);
-    dragStart.current = { x: e.clientX, scrollLeft: scrollRef.current.scrollLeft };
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    const dx = e.clientX - dragStart.current.x;
-    scrollRef.current.scrollLeft = dragStart.current.scrollLeft - dx;
-  };
-
-  const handlePointerUp = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    if (resumeTimer.current) clearTimeout(resumeTimer.current);
-    resumeTimer.current = setTimeout(() => {
-      userInteractingRef.current = false;
-    }, 1800);
-  };
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-orange-50/80 to-white overflow-hidden">
@@ -103,27 +86,24 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
           </h2>
           <div className="w-16 h-1 bg-[var(--brand-gold)] mx-auto rounded-full mb-6" />
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Real results from real patients at Zahra Dental Clinic. Drag or scroll horizontally to view all.
+            Real results from real patients at Zahra Dental Clinic. Swipe or scroll horizontally to view all.
           </p>
         </div>
       </div>
 
-      {/* Auto-scrolling gallery with manual horizontal scroll */}
+      {/* Auto-scrolling gallery — native horizontal pan, vertical page scroll not blocked */}
       <div
         ref={scrollRef}
-        className={`flex gap-5 overflow-x-auto no-scrollbar px-4 md:px-8 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} select-none`}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
+        className="flex gap-5 overflow-x-auto no-scrollbar px-4 md:px-8"
+        style={{ touchAction: 'pan-x pan-y' }}
       >
         {allImages.map((img, i) => (
-          <div key={i} className="relative flex-shrink-0 w-[280px] md:w-[350px] h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
+          <div key={i} className="relative flex-shrink-0 w-[260px] sm:w-[300px] md:w-[350px] h-[320px] sm:h-[380px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
             <Image
               src={img.src}
               alt={`${img.label} dental treatment`}
               fill
-              sizes="(max-width: 768px) 280px, 350px"
+              sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, 350px"
               className="object-cover pointer-events-none"
               draggable={false}
             />
