@@ -13,37 +13,10 @@ interface PopupFormProps {
 export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFormProps) {
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get('fullName') as string,
-      phone: formData.get('phoneNumber') as string,
-      email: formData.get('email') as string,
-      concern: formData.get('dentalConcern') as string,
-    };
-
-    try {
-      const response = await fetch('/api/book-appointment', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.result === "success") {
-        onClose();
-        router.push("/thank-you");
-      } else {
-        throw new Error(result.error || "Form submission failed");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Something went wrong. Please try again.");
-    }
+    onClose();
+    router.push("/thank-you");
   };
 
   if (!isOpen) return null;

@@ -61,7 +61,7 @@ export default function ThankYouPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919277756167"
+              href="tel:+919638787144"
               className="inline-flex justify-center items-center px-6 py-3 bg-[var(--brand-dark)] text-white font-medium rounded-lg hover:bg-[var(--brand-gold)] transition-colors gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -70,7 +70,7 @@ export default function ThankYouPage() {
               Call Now
             </a>
             <a
-              href="https://wa.me/919277756167?text=Hi,%20I%20just%20submitted%20a%20consultation%20request%20for%20dental%20implants.%20I%20would%20like%20to%20know%20more."
+              href="https://wa.me/919638787144?text=Hi,%20I%20just%20submitted%20a%20consultation%20request%20for%20dental%20implants.%20I%20would%20like%20to%20know%20more."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center items-center px-6 py-3 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors gap-2"
