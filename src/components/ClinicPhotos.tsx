@@ -5,7 +5,12 @@ interface ClinicPhotosProps {
 }
 
 export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
-  const photos = ['clinic1.jpg', 'clininc2.jpg', 'clinic3.jpg', 'clininc4.jpg'];
+  const photos = [
+    '/clinic/Screenshot_2026-04-22-16-51-34-15_92460851df6f172a4592fca41cc2d2e6.jpg',
+    '/clinic/Screenshot_2026-04-22-16-51-57-27_92460851df6f172a4592fca41cc2d2e6.jpg',
+    '/clinic/Screenshot_2026-04-22-16-52-18-49_92460851df6f172a4592fca41cc2d2e6.jpg',
+    '/clinic/Screenshot_2026-04-22-16-53-00-23_92460851df6f172a4592fca41cc2d2e6.jpg',
+  ];
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
@@ -30,7 +35,7 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
               }`}
             >
               <Image
-                src={`/images/clinic/${img}`}
+                src={img}
                 alt={`Zahra Dental Clinic ${i + 1}`}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
