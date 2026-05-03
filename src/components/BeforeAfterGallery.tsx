@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface BeforeAfterGalleryProps {
   onBookAppointment: () => void;
@@ -91,30 +92,58 @@ export default function BeforeAfterGallery({ onBookAppointment }: BeforeAfterGal
         </div>
       </div>
 
-      {/* Auto-scrolling gallery — native horizontal pan, vertical page scroll not blocked */}
-      <div
-        ref={scrollRef}
-        className="flex gap-5 overflow-x-auto no-scrollbar px-4 md:px-8"
-        style={{ touchAction: 'pan-x pan-y' }}
-      >
-        {allImages.map((img, i) => (
-          <div key={i} className="relative flex-shrink-0 w-[260px] sm:w-[300px] md:w-[350px] h-[320px] sm:h-[380px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src={img.src}
-              alt={`${img.label} dental treatment`}
-              fill
-              sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, 350px"
-              className="object-cover pointer-events-none"
-              draggable={false}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-            <span className={`absolute top-4 left-4 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider pointer-events-none ${
-              img.label === "Before" ? "bg-black/60 backdrop-blur-sm" : "bg-[var(--brand-gold)] backdrop-blur-sm"
-            }`}>
-              {img.label}
-            </span>
-          </div>
-        ))}
+      {/* Auto-scrolling gallery with manual nav arrows */}
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          className="flex gap-5 overflow-x-auto no-scrollbar px-4 md:px-8 scroll-smooth"
+          style={{ touchAction: 'pan-x pan-y' }}
+        >
+          {allImages.map((img, i) => (
+            <div key={i} className="relative flex-shrink-0 w-[260px] sm:w-[300px] md:w-[350px] h-[320px] sm:h-[380px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src={img.src}
+                alt={`${img.label} dental treatment`}
+                fill
+                sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, 350px"
+                className="object-cover pointer-events-none"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <span className={`absolute top-4 left-4 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider pointer-events-none ${
+                img.label === "Before" ? "bg-black/60 backdrop-blur-sm" : "bg-[var(--brand-gold)] backdrop-blur-sm"
+              }`}>
+                {img.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Manual navigation arrows */}
+        <button
+          aria-label="Previous"
+          onClick={() => {
+            const c = scrollRef.current;
+            if (!c) return;
+            const card = (c.firstElementChild as HTMLElement | null)?.offsetWidth ?? 280;
+            c.scrollBy({ left: -(card + 20), behavior: 'smooth' });
+          }}
+          className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-10 bg-white/95 hover:bg-white text-[var(--brand-dark)] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-100 transition-all hover:scale-110"
+        >
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+        </button>
+        <button
+          aria-label="Next"
+          onClick={() => {
+            const c = scrollRef.current;
+            if (!c) return;
+            const card = (c.firstElementChild as HTMLElement | null)?.offsetWidth ?? 280;
+            c.scrollBy({ left: card + 20, behavior: 'smooth' });
+          }}
+          className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-10 bg-white/95 hover:bg-white text-[var(--brand-dark)] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-100 transition-all hover:scale-110"
+        >
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+        </button>
       </div>
 
       {/* CTA */}
