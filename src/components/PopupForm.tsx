@@ -15,6 +15,23 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: (formData.get('fullName') as string) || '',
+      phone: (formData.get('phoneNumber') as string) || '',
+      email: (formData.get('email') as string) || '',
+      concern: (formData.get('dentalConcern') as string) || '',
+    };
+
+    // Fire-and-forget: send to Google Sheet via Apps Script. Use text/plain to avoid CORS preflight.
+    fetch('https://script.google.com/macros/s/AKfycby3VLBeirIQP57otPHdG99WTzi8dIKwV95m4oPoEIKos_plOuVUcdXsBFiQ8BASFv995g/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data),
+    }).catch(() => { /* silent — always redirect */ });
+
     onClose();
     router.push("/thank-you");
   };
